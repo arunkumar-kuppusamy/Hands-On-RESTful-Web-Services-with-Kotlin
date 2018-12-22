@@ -25,7 +25,7 @@ inline fun inlines(types: (Int, Int) -> Int): Int = types(3, 5)
 inline fun <reified T : Any> clazz() = T::class.java
 
 // Infix function
-infix fun String.similiars(param: String): Boolean = this == param
+infix fun String.similars(param: String): Boolean = this == param
 
 // Named argument function
 fun arguments(name: String, status: Boolean) {
@@ -47,7 +47,7 @@ fun main(args: Array<String>) {
     privates()
     internals()
     println("${inlines { x, y -> x + y }}")
-    println("Budi" similiars "Budi")
+    println("Budi" similars "Budi")
     println(clazz<Long>().simpleName)
     arguments(status = false, name = "Visibility")
     println(defaults("Age"))
